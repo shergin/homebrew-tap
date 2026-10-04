@@ -36,7 +36,8 @@ dependency) and installs the binary, shell completions, and the man page.
 ## Caton
 
 [Caton](https://github.com/shergin/caton) — a menu bar inbox for GitHub
-notifications that shows only what needs you. Requires macOS 26.
+notifications that shows only what needs you. Requires macOS 26 on Apple
+silicon.
 
 ```sh
 brew install --cask shergin/tap/caton
