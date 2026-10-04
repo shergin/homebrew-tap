@@ -1,6 +1,6 @@
 # shergin/homebrew-tap
 
-Homebrew formulae for [shergin](https://github.com/shergin)'s tools.
+Homebrew formulae and casks for [shergin](https://github.com/shergin)'s tools.
 
 ## kaz
 
@@ -32,3 +32,22 @@ dependency) and installs the binary, shell completions, and the man page.
 
 3. `brew audit --strict --online shergin/tap/kaz` and
    `brew install --build-from-source shergin/tap/kaz` to verify, then commit.
+
+## Caton
+
+[Caton](https://github.com/shergin/caton) — a menu bar inbox for GitHub
+notifications that shows only what needs you. Requires macOS 26.
+
+```sh
+brew install --cask shergin/tap/caton
+```
+
+Caton is not notarized, so macOS blocks its first launch: open System
+Settings › Privacy & Security and click Open Anyway, once. `brew upgrade
+--cask caton` installs updates; the app says when one is out.
+
+### Releasing a new version
+
+Run `./scripts/release.sh --publish` in the Caton repo after bumping the
+version: it creates the GitHub Release and updates `Casks/caton.rb` here. See
+[homebrew/README.md](https://github.com/shergin/caton/blob/main/homebrew/README.md).
